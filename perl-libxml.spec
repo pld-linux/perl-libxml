@@ -41,7 +41,7 @@ PerlSAX, XML::DOM, XML::Grove i innymi.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor 
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %{?_with_tests:%{__make} test}
 
