@@ -16,7 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	a79c6da708e5906fec84ea611fa4b41e
 URL:		http://bitsko.slc.ut.us/libxml-perl/
-BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-XML-Parser >= 2.19
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
