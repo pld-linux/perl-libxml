@@ -40,7 +40,7 @@ PerlSAX, XML::DOM, XML::Grove i innymi.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{?_with_tests:%{__make} test}
