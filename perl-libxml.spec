@@ -6,8 +6,14 @@ Version:	0.07
 Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
+Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
 Group(de):	Entwicklung/Sprachen/Perl
+Group(es):	Desarrollo/Lenguajes/Perl
+Group(fr):	Development/Langues/Perl
+Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
+Group(pt):	Desenvolvimento/Linguagens/Perl
+Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/libxml-perl-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.6
@@ -17,9 +23,9 @@ Obsoletes:	perl-libxml-perl
 
 %description
 libxml-perl is a collection of smaller Perl modules, scripts, and
-documents for working with XML in Perl. libxml-perl software
-works in combination with XML::Parser, PerlSAX, XML::DOM,
-XML::Grove and others.
+documents for working with XML in Perl. libxml-perl software works in
+combination with XML::Parser, PerlSAX, XML::DOM, XML::Grove and
+others.
 
 %description -l pl
 libxml-perl to zestaw mniejszych perlowych modu³ów, skryptów i
