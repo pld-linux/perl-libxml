@@ -13,6 +13,7 @@ Release:	11
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+# Source0-md5:	a79c6da708e5906fec84ea611fa4b41e
 URL:		http://bitsko.slc.ut.us/libxml-perl/
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.19
