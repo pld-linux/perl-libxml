@@ -12,7 +12,7 @@ Version:	0.07
 Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 URL:		http://bitsko.slc.ut.us/libxml-perl/
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.19
