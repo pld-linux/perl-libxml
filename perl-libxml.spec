@@ -3,7 +3,7 @@ Summary:	Perl libxml module
 Summary(pl):	Modu³ perla libxml
 Name:		perl-libxml
 Version:	0.07
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -16,9 +16,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 libxml-perl is a collection of smaller Perl modules, scripts, and
-documents for working with XML in Perl.  libxml-perl software
+documents for working with XML in Perl. libxml-perl software
 works in combination with XML::Parser, PerlSAX, XML::DOM,
 XML::Grove and others.
+
+%description -l pl
+libxml-perl to zestaw mniejszych perlowych modu³ów, skryptów i
+dokumentów do pracy z XML w Perlu. Dzia³a w po³±czeniu z XML::Parser,
+PerlSAX, XML::DOM, XML::Grove i innymi.
 
 %prep
 %setup -q -n libxml-perl-%{version}
