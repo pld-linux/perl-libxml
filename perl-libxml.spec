@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	libxml-perl
 Summary:	Collection of Perl modules for working with XML
-Summary(pl):	Kolekcja modu³ów Perla do pracy z XML
+Summary(pl):	Kolekcja modu³ów Perla do pracy z XML-em
 Name:		perl-libxml
 Version:	0.07
 Release:	11
@@ -32,8 +32,8 @@ others.
 
 %description -l pl
 libxml-perl to zestaw mniejszych perlowych modu³ów, skryptów i
-dokumentów do pracy z XML w Perlu. Dzia³a w po³±czeniu z XML::Parser,
-PerlSAX, XML::DOM, XML::Grove i innymi.
+dokumentów do pracy z XML-em w Perlu. Dzia³a w po³±czeniu z
+XML::Parser, PerlSAX, XML::DOM, XML::Grove i innymi.
 
 %prep
 %setup -q -n %{pnam}-%{version}
