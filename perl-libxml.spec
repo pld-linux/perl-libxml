@@ -1,33 +1,19 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+# _with_tests - perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
 %define		pnam	libxml-perl
-Summary:	libxml Perl module
-Summary(cs):	Modul libxml pro Perl
-Summary(da):	Perlmodul libxml
-Summary(de):	libxml Perl Modul
-Summary(es):	Módulo de Perl libxml
-Summary(fr):	Module Perl libxml
-Summary(it):	Modulo di Perl libxml
-Summary(ja):	libxml Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	libxml ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul libxml
-Summary(pl):	Modu³ Perla libxml
-Summary(pt):	Módulo de Perl libxml
-Summary(pt_BR):	Módulo Perl libxml
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl libxml
-Summary(sv):	libxml Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libxml
-Summary(zh_CN):	libxml Perl Ä£¿é
+Summary:	Collection of Perl modules for working with XML.
+Summary(pl):	Kolekcja modu³ów Perla do pracy z XML.
 Name:		perl-libxml
 Version:	0.07
 Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+URL:		http://bitsko.slc.ut.us/libxml-perl/
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.19
 BuildRequires:	rpm-perlprov >= 3.0.3-18
@@ -53,7 +39,7 @@ PerlSAX, XML::DOM, XML::Grove i innymi.
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
-%{!?_without_tests:%{__make} test}
+%{?_with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
