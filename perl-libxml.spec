@@ -9,14 +9,14 @@ Summary:	Collection of Perl modules for working with XML
 Summary(pl):	Kolekcja modu³ów Perla do pracy z XML
 Name:		perl-libxml
 Version:	0.07
-Release:	9
+Release:	10
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 URL:		http://bitsko.slc.ut.us/libxml-perl/
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.19
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	perl-libxml-perl
@@ -38,7 +38,8 @@ PerlSAX, XML::DOM, XML::Grove i innymi.
 %setup -q -n %{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{?_with_tests:%{__make} test}
@@ -54,10 +55,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README Change*
-%{perl_sitelib}/Data/Grove.pm
-%{perl_sitelib}/Data/Grove
-%{perl_sitelib}/XML/*.pm
-%{perl_sitelib}/XML/Handler/*.pm
-%{perl_sitelib}/XML/Parser/*.pm
-%{perl_sitelib}/XML/PatAct
+%{perl_vendorlib}/Data/Grove.pm
+%{perl_vendorlib}/Data/Grove
+%{perl_vendorlib}/XML/*.pm
+%{perl_vendorlib}/XML/Handler/*.pm
+%{perl_vendorlib}/XML/Parser/*.pm
+%{perl_vendorlib}/XML/PatAct
 %{_mandir}/man3/*
