@@ -9,7 +9,7 @@ Summary:	Collection of Perl modules for working with XML
 Summary(pl):	Kolekcja modu³ów Perla do pracy z XML
 Name:		perl-libxml
 Version:	0.07
-Release:	9
+Release:	10
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -17,11 +17,10 @@ URL:		http://bitsko.slc.ut.us/libxml-perl/
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.19
 BuildRequires:	rpm-perlprov >= 4.0.2-104
+Obsoletes:	perl-libxml-perl
+BuildConflicts:	perl-Attribute-Persistent < 1.0-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Obsoletes:	perl-libxml-perl
-
-%define		_noautoreqdep	'perl(UNIVERSAL)'
 
 %description
 libxml-perl is a collection of smaller Perl modules, scripts, and
