@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test"
+%bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
@@ -19,8 +19,8 @@ BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.19
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	perl-libxml-perl
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	'perl(UNIVERSAL)'
 
@@ -43,7 +43,7 @@ XML::Parser, PerlSAX, XML::DOM, XML::Grove i innymi.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
