@@ -3,7 +3,7 @@ Summary:	Perl libxml module
 Summary(pl):	Modu³ perla libxml
 Name:		perl-libxml
 Version:	0.07
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -13,6 +13,7 @@ BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	perl-libxml-perl
 
 %description
 libxml-perl is a collection of smaller Perl modules, scripts, and
