@@ -9,7 +9,7 @@ Summary:	Collection of Perl modules for working with XML
 Summary(pl):	Kolekcja modu³ów Perla do pracy z XML
 Name:		perl-libxml
 Version:	0.07
-Release:	10
+Release:	11
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
