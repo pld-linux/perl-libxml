@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
 %define		pnam	libxml-perl
@@ -20,7 +24,7 @@ Summary(uk):	Модуль для Perl libxml
 Summary(zh_CN):	libxml Perl дё©И
 Name:		perl-libxml
 Version:	0.07
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -49,6 +53,8 @@ PerlSAX, XML::DOM, XML::Grove i innymi.
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
+%{!?_without_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,5 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Change*
 %{perl_sitelib}/Data/Grove.pm
 %{perl_sitelib}/Data/Grove
-%{perl_sitelib}/XML/*
+%{perl_sitelib}/XML/*.pm
+%{perl_sitelib}/XML/Handler/*.pm
+%{perl_sitelib}/XML/Parser/*.pm
+%{perl_sitelib}/XML/PatAct
 %{_mandir}/man3/*
