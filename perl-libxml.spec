@@ -1,4 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
+%define	pdir	XML
+%define	pnam	libxml-perl
 Summary:	Perl libxml module
 Summary(pl):	Modu³ perla libxml
 Name:		perl-libxml
@@ -6,9 +8,10 @@ Version:	0.07
 Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/XML/libxml-perl-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
+BuildRequires:	perl-XML-Parser >= 2.19
+BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	perl-libxml-perl
@@ -25,7 +28,7 @@ dokumentów do pracy z XML w Perlu. Dzia³a w po³±czeniu z XML::Parser,
 PerlSAX, XML::DOM, XML::Grove i innymi.
 
 %prep
-%setup -q -n libxml-perl-%{version}
+%setup -q -n %{pnam}-%{version}
 
 %build
 perl Makefile.PL
@@ -36,14 +39,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README Change*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README Change*
 %{perl_sitelib}/Data/Grove.pm
 %{perl_sitelib}/Data/Grove
 %{perl_sitelib}/XML/*
