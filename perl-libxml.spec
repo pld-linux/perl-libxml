@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	libxml-perl
+%define		pdir	XML
+%define		pnam	libxml-perl
 Summary:	Collection of Perl modules for working with XML
 Summary(pl):	Kolekcja modu³ów Perla do pracy z XML-em
 Name:		perl-libxml
