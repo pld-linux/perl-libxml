@@ -10,7 +10,8 @@ Summary(pl):	Kolekcja modu³ów Perla do pracy z XML-em
 Name:		perl-libxml
 Version:	0.07
 Release:	11
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	a79c6da708e5906fec84ea611fa4b41e
@@ -48,7 +49,8 @@ XML::Parser, PerlSAX, XML::DOM, XML::Grove i innymi.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
