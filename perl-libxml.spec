@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	libxml-perl
-Summary:	Perl libxml module
-Summary(pl):	Modu³ perla libxml
+%define		pdir	XML
+%define		pnam	libxml-perl
+Summary:	libxml Perl module
+Summary(cs):	Modul libxml pro Perl
+Summary(da):	Perlmodul libxml
+Summary(de):	libxml Perl Modul
+Summary(es):	Módulo de Perl libxml
+Summary(fr):	Module Perl libxml
+Summary(it):	Modulo di Perl libxml
+Summary(ja):	libxml Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	libxml ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul libxml
+Summary(pl):	Modu³ Perla libxml
+Summary(pt):	Módulo de Perl libxml
+Summary(pt_BR):	Módulo Perl libxml
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl libxml
+Summary(sv):	libxml Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl libxml
+Summary(zh_CN):	libxml Perl Ä£¿é
 Name:		perl-libxml
 Version:	0.07
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
