@@ -3,7 +3,7 @@ Summary:	Perl libxml module
 Summary(pl):	Modu³ perla libxml
 Name:		perl-libxml
 Version:	0.07
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/libxml-perl-%{version}.tar.gz
