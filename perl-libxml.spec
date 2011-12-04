@@ -13,11 +13,11 @@ Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/%{pnam}-%{version}.tar.gz
 # Source0-md5:	0ed5fbdda53d1301ddaed88db10503bb
-URL:		http://bitsko.slc.ut.us/libxml-perl/
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/libxml-perl/
 BuildRequires:	perl-XML-Parser >= 2.19
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 Obsoletes:	perl-libxml-perl
@@ -60,8 +60,19 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Change*
 %{perl_vendorlib}/Data/Grove.pm
 %{perl_vendorlib}/Data/Grove
-%{perl_vendorlib}/XML/*.pm
-%{perl_vendorlib}/XML/Handler/*.pm
-%{perl_vendorlib}/XML/Parser/*.pm
+%{perl_vendorlib}/XML/ESISParser.pm
+%{perl_vendorlib}/XML/Perl2SAX.pm
+%{perl_vendorlib}/XML/SAX2Perl.pm
+%{perl_vendorlib}/XML/Handler/CanonXMLWriter.pm
+%{perl_vendorlib}/XML/Handler/Sample.pm
+%{perl_vendorlib}/XML/Handler/Subs.pm
+%{perl_vendorlib}/XML/Handler/XMLWriter.pm
+%{perl_vendorlib}/XML/Parser/PerlSAX.pm
 %{perl_vendorlib}/XML/PatAct
-%{_mandir}/man3/*
+%{_mandir}/man3/Data::Grove*.3pm*
+%{_mandir}/man3/XML::ESISParser.3pm*
+%{_mandir}/man3/XML::Handler::*.3pm*
+%{_mandir}/man3/XML::Parser::PerlSAX.3pm*
+%{_mandir}/man3/XML::PatAct::*.3pm*
+%{_mandir}/man3/XML::Perl2SAX.3pm*
+%{_mandir}/man3/XML::SAX2Perl.3pm*
