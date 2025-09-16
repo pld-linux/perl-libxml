@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests	# perform "make test"
+%bcond_with	tests	# unit tests
 #
 %define		pdir	XML
 %define		pnam	libxml-perl
@@ -12,12 +12,13 @@ Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/XML/%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/XML/%{pnam}-%{version}.tar.gz
 # Source0-md5:	0ed5fbdda53d1301ddaed88db10503bb
-URL:		http://search.cpan.org/dist/libxml-perl/
+URL:		https://metacpan.org/dist/libxml-perl
 BuildRequires:	perl-XML-Parser >= 2.19
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 Obsoletes:	perl-libxml-perl < 0.08
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
