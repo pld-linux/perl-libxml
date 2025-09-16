@@ -19,7 +19,7 @@ BuildRequires:	perl-XML-Parser >= 2.19
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
-Obsoletes:	perl-libxml-perl
+Obsoletes:	perl-libxml-perl < 0.08
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	'perl(UNIVERSAL)'
